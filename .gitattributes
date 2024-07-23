@@ -1,0 +1,6 @@
+# Define que o Git sempre converterá delimitadores de linha em LF
+*.txt eol=lf
+*.md eol=lf
+*.html eol=lf
+*.css eol=lf
+*.js eol=lf
