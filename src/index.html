@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Poke TCG Status</title>
+	<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+	<h1>Pokémon TCG App</h1>
+	<samp>Nome do Pokemon:</samp>
+	<input type="text" id="nome_poke" placeholder="Nome do Pokémon">
+	<samp>Status:</samp>
+	<select id="pokemon-status">
+		<option value="Normal">Normal</option>
+		<option value="Queimado">Queimado</option>
+		<option value="Envenenado">Envenenado</option>
+		<option value="Adormecido">Adormecido</option>
+		<option value="Paralizado">Paralizado</option>
+		<option value="Confuso">Confuso</option>
+	</select>
+	<button id="adicionar_poke">Adicionar Pokémon</button>
+	<ul id="lista_poke"></ul>
+
+	<script src="script.js"></script>
+
+</body>
+</html>
