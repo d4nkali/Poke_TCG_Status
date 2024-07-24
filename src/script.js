@@ -15,7 +15,7 @@ window.addEventListener('DOMContentLoaded', () => {
             listItem.textContent = `${nomePokemon} - ${pokemonStatus}`;
             listItem.addEventListener('click', () => {
 
-                const novoStatus = prompt(`Digite o novo status para ${nomePokemon} (Queimado, Envenenado, Adormecido, Paralisado, Confuso):`);
+                const novoStatus = prompt(`Digite o novo status para ${nomePokemon} (Normal, Queimado, Envenenado, Adormecido, Paralisado, Confuso):`);
                 if (novoStatus) {
 
                     listItem.textContent = `${nomePokemon} - ${novoStatus}`;
