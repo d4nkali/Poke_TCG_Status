@@ -1,3 +1,7 @@
+# Pasta vscode
+
+.vscode/
+
 # Logs
 logs
 *.log
