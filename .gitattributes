@@ -4,3 +4,9 @@
 *.html eol=lf
 *.css eol=lf
 *.js eol=lf
+*.sh eol=lf
+
+# Adicionando o JSON do Node como linguagem
+package.json linguist-detectable=true
+package.json linguist-documentation=false
+
