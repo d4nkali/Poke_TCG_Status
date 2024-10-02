@@ -7,43 +7,34 @@ Autor: d4nkali
 Data: 02/10/2024
 
 */
-
 body {
-
-    background-color: #2C3E50; /* Cor mais escura para o fundo */
-    color: #ECF0F1; /* Texto claro para contraste */
+    background-color: #2C3E50; 
+    color: #ECF0F1; 
     font-family: 'Arial', sans-serif;
     text-align: center;
-
 }
 
 h1 {
-
-    color: #F1C40F; /* Amarelo vibrante para o título */
+    color: #F1C40F; 
     font-size: 2.5em;
     margin-bottom: 20px;
-
 }
 
 input, select {
-
     background-color: #34495E;
     color: #ECF0F1;
     border: none;
     padding: 10px;
     border-radius: 5px;
-
 }
 
 button {
-
     background-color: #E74C3C; 
     color: #FFF;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-
 }
 
 button:hover {
@@ -51,21 +42,17 @@ button:hover {
 }
 
 ul {
-
     list-style-type: none;
     padding: 0;
     margin-top: 20px;
-
 }
 
 li {
-
     background-color: #34495E;
     color: #ECF0F1;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
-
 }
 
 @media (max-width: 600px) {
@@ -78,4 +65,28 @@ li {
         margin: 10px auto;
         display: block;
     }
+}
+
+option.normal {
+    background-color: #49524d;
+}
+
+option.queimado {
+    background-color: #E74C3C;
+}
+
+option.envenenado {
+    background-color: #9B59B6;
+}
+
+option.adormecido {
+    background-color: #3498DB;
+}
+
+option.paralisado {
+    background-color: #F1C40F;
+}
+
+option.confuso {
+    background-color: #E67E22;
 }
