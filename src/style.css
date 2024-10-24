@@ -1,3 +1,5 @@
+@import url('https://fonts.cdnfonts.com/css/pokemon-solid');
+
 body {
     background-color: #2C3E50; 
     color: #ECF0F1; 
@@ -9,6 +11,12 @@ h1 {
     color: #F1C40F; 
     font-size: 2.5em;
     margin-bottom: 20px;
+    font-family: 'Pokemon Solid', sans-serif;
+}
+
+span, samp {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }
 
 input, select {
@@ -20,7 +28,21 @@ input, select {
 }
 
 button {
-    background-color: #E74C3C; 
+    background-color: #e6eaee; 
+    color: #000000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 1%;
+}
+
+button:hover {
+    background-color: #dad7d7;
+}
+
+#botao-editar {
+    background-color: #79d622; 
     color: #FFF;
     padding: 10px 20px;
     border: none;
@@ -28,7 +50,20 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+#botao-editar:hover {
+    background-color: #6fb42e;
+}
+
+#botao-remover {
+        background-color: #E74C3C; 
+        color: #FFF;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+}
+
+#botao-remover:hover {
     background-color: #C0392B;
 }
 

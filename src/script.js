@@ -1,33 +1,48 @@
 window.addEventListener('DOMContentLoaded', () => {
 
-    // Pega os id do HTML para variáveis no Javascript
+    const botaoAdicionarPoke = document.getElementById('adicionar_poke');
+    const entradaNomePoke = document.getElementById('nome_poke');
+    const selecaoStatusPoke = document.getElementById('status_poke');
+    const listaPokemon = document.getElementById('lista_poke');
 
-        const botaoAdicionarPoke = document.getElementById('adicionar_poke');
-        const entradaNomePoke = document.getElementById('nome_poke');
-        const selecaoStatusPoke = document.getElementById('status_poke');
-        const listaPokemon = document.getElementById('lista_poke');
-
-    botaoAdicionarPoke.addEventListener('click', () => { //* Evento de quando clicar em adicionar pokemon
+    botaoAdicionarPoke.addEventListener('click', () => {
 
         const nomePokemon = entradaNomePoke.value.trim();
         const pokemonStatus = selecaoStatusPoke.value;
-        if (nomePokemon && pokemonStatus) { //* Se tiver o campo de nome e status preenchidos, então:
 
-            const listItem = document.createElement('li'); // Cria um elemento lista
-            listItem.textContent = `${nomePokemon} - ${pokemonStatus}`;
-            listItem.addEventListener('click', () => {
+        if (nomePokemon && pokemonStatus) {
 
+            const listItem = document.createElement('li');
+
+            const conteudoPokemon = document.createElement('span');
+            conteudoPokemon.textContent = `${nomePokemon} - ${pokemonStatus}`;
+
+            const botaoEditar = document.createElement('button');
+            botaoEditar.textContent = 'Editar';
+            botaoEditar.id = `botao-editar`
+
+            botaoEditar.addEventListener('click', () => {
                 const novoStatus = prompt(`Digite o novo status para ${nomePokemon} (Normal, Queimado, Envenenado, Adormecido, Paralisado, Confuso):`);
-                if (novoStatus) { //* Se tiver um novo status:
-
-                    listItem.textContent = `${nomePokemon} - ${novoStatus}`; // Atualiza os campos
-
+                if (novoStatus) {
+                    conteudoPokemon.textContent = `${nomePokemon} - ${novoStatus}`;
                 }
-
             });
 
-            listaPokemon.appendChild(listItem); //? Adiciona o novo item a lista
-            entradaNomePoke.value = ''; // Limpa os campos
+            const botaoRemover = document.createElement('button');
+            botaoRemover.textContent = 'Remover';
+            botaoRemover.id = `botao-remover`
+
+            botaoRemover.addEventListener('click', () => {
+                listaPokemon.removeChild(listItem);
+            });
+
+            listItem.appendChild(conteudoPokemon);
+            listItem.appendChild(botaoEditar);
+            listItem.appendChild(botaoRemover);
+
+            listaPokemon.appendChild(listItem);
+
+            entradaNomePoke.value = '';
 
         }
 
