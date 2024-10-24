@@ -15,9 +15,7 @@
         "productName": "Poke TCG App",
         "linux": {
             "target": [
-                "AppImage",
-                "deb",
-                "rpm"
+                "AppImage"
             ],
             "category": "Utility",
             "maintainer": "d4nkali <d4n_kali@protonmail.com>"
@@ -25,8 +23,7 @@
         "win": {
             "target": [
                 {
-                    "target": "portable",
-                    "arch": "x64"
+                    "target": "portable"
                 }
             ]
         },
