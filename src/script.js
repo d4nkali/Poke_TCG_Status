@@ -1,13 +1,3 @@
-/*
-
-Programação do aplicativo
-
-
-Autor: d4nkali
-Data: 24/07/2024
-
-*/
-
 window.addEventListener('DOMContentLoaded', () => {
 
     // Pega os id do HTML para variáveis no Javascript
