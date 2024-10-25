@@ -13,12 +13,14 @@
     "build": {
         "appId": "com.d4nkali.pokemontcgapp",
         "productName": "Poke TCG App",
+        "copyright": "Copyright © 2024 d4nkali",
         "linux": {
             "target": [
                 "AppImage"
             ],
             "category": "Utility",
-            "maintainer": "d4nkali <d4n_kali@protonmail.com>"
+            "maintainer": "d4nkali <d4n_kali@protonmail.com>",
+            "icon": "src/favicon_pokemon_TCG_APP.png"
         },
         "win": {
             "target": [
@@ -33,7 +35,7 @@
             "package.json"
         ],
         "directories": {
-            "buildResources": "build"
+            "buildResources": "src"
         }
     },
     "repository": {
@@ -42,7 +44,8 @@
     },
     "author": {
         "name": "d4nkali",
-        "email": "d4n_kali@protonmail.com"
+        "email": "d4n_kali@protonmail.com",
+        "url": "https://github.com/d4nkali"
     },
     "license": "MIT",
     "bugs": {
