@@ -4,3 +4,4 @@
 *.html eol=lf
 *.css eol=lf
 *.js eol=lf
+*.sh eol=lf
