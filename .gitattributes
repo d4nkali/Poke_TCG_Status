@@ -5,3 +5,10 @@
 *.css eol=lf
 *.js eol=lf
 *.sh eol=lf
+*.sql eol=lf
+package.json eol=lf
+package-lock.json eol=lf
+
+# Colocando sql como linguagem no github
+*.sql linguist-detectable=true
+*.sql linguist-language=sql
