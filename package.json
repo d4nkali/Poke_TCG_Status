@@ -1,0 +1,19 @@
+{
+    "name": "poke_tcg_status",
+    "version": "0.0.1",
+    "description": "Aplicativo para ajudar nas batalhas de Pokémon TCG, permitindo adicionar Pokémons e alterar o seu status.",
+    "main": "main.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/d4nkali/Poke_TCG_Status.git"
+    },
+    "author": "d4nkali",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/d4nkali/Poke_TCG_Status/issues"
+    },
+    "homepage": "https://github.com/d4nkali/Poke_TCG_Status#readme"
+}
