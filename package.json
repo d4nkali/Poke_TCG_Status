@@ -9,6 +9,34 @@
         "electron": "electron .",
         "dev": "concurrently \"npm:start\" \"npm:electron\""
     },
+    "build": {
+        "appId": "com.d4nkali.pokemontcgapp",
+        "productName": "Poke TCG App",
+        "copyright": "Copyright © 2024 d4nkali",
+        "linux": {
+            "target": [
+                "AppImage"
+            ],
+            "category": "Utility",
+            "maintainer": "d4nkali <d4n_kali@protonmail.com>",
+            "icon": "src/favicon_pokemon_TCG_APP.png"
+        },
+        "win": {
+            "target": [
+                {
+                    "target": "portable"
+                }
+            ]
+        },
+        "files": [
+            "frontend/**/*",
+            "electron/**/*",
+            "package.json"
+        ],
+        "directories": {
+            "buildResources": "src"
+        }
+    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/d4nkali/Poke_TCG_Status.git"
