@@ -16,3 +16,4 @@ build
 **/*.txt
 **/*.sh
 **/*.sql
+**/*.svg
