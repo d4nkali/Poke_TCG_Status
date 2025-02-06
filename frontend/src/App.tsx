@@ -1,6 +1,14 @@
+import { useEffect } from 'react';
+import scriptPokemon from './script';
 import './App.css'
 
 function App() {
+
+    useEffect(() => {
+
+        scriptPokemon();
+
+    }, []);
 
     return (
 
@@ -10,7 +18,7 @@ function App() {
 
             <h1>Pokémon TCG App</h1>
 
-            {/* Gerenciar Pokémon's em batalha */}
+            {/* Gerenciar Pokémons em batalha */}
 
             <samp>Nome do Pokémon:</samp>
             <input type="text" id="nome_poke" placeholder="Nome do Pokémon"></input>
@@ -31,9 +39,6 @@ function App() {
             <ul id="lista_poke"></ul>
 
             </main>
-
-            <script src="script.js"></script>
-
 
         </>
 
