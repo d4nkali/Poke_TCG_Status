@@ -48,6 +48,7 @@
     },
     "homepage": "https://github.com/d4nkali/Poke_TCG_Status#readme",
     "devDependencies": {
+        "concurrently": "^9.1.2",
         "electron": "^34.0.2",
         "electron-builder": "^25.1.8",
         "prettier": "^3.4.2"
