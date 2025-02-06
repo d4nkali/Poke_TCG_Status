@@ -1,9 +1,17 @@
-window.addEventListener('DOMContentLoaded', () => {
+function scriptPokemon() {
 
-    const botaoAdicionarPoke = document.getElementById('adicionar_poke');
-    const entradaNomePoke = document.getElementById('nome_poke');
-    const selecaoStatusPoke = document.getElementById('status_poke');
-    const listaPokemon = document.getElementById('lista_poke');
+    const botaoAdicionarPoke = document.getElementById('adicionar_poke') as HTMLButtonElement | null;
+    const entradaNomePoke = document.getElementById('nome_poke') as HTMLInputElement | null;
+    const selecaoStatusPoke = document.getElementById('status_poke') as HTMLSelectElement | null;
+    const listaPokemon = document.getElementById('lista_poke') as HTMLUListElement | null;
+
+    if (!botaoAdicionarPoke || !entradaNomePoke ||
+        !selecaoStatusPoke || !listaPokemon ) {
+
+        console.warn('Elementos HTML não foram encontrados.');
+        return;
+
+    }
 
     botaoAdicionarPoke.addEventListener('click', () => {
 
@@ -19,19 +27,19 @@ window.addEventListener('DOMContentLoaded', () => {
 
             const botaoEditar = document.createElement('button');
             botaoEditar.textContent = 'Editar';
-            botaoEditar.id = `botao-editar`
-
             botaoEditar.addEventListener('click', () => {
-                const novoStatus = prompt(`Digite o novo status para ${nomePokemon} (Normal, Queimado, Envenenado, Adormecido, Paralisado, Confuso):`);
+
+                const novoStatus = prompt(
+                    `Digite o novo status para ${nomePokemon}:`,
+                );
                 if (novoStatus) {
                     conteudoPokemon.textContent = `${nomePokemon} - ${novoStatus}`;
                 }
+
             });
 
             const botaoRemover = document.createElement('button');
             botaoRemover.textContent = 'Remover';
-            botaoRemover.id = `botao-remover`
-
             botaoRemover.addEventListener('click', () => {
                 listaPokemon.removeChild(listItem);
             });
@@ -39,13 +47,13 @@ window.addEventListener('DOMContentLoaded', () => {
             listItem.appendChild(conteudoPokemon);
             listItem.appendChild(botaoEditar);
             listItem.appendChild(botaoRemover);
-
             listaPokemon.appendChild(listItem);
 
             entradaNomePoke.value = '';
-
         }
 
     });
 
-});
+}
+
+export default scriptPokemon;
