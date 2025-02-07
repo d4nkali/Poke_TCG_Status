@@ -1,19 +1,19 @@
 {
     "name": "poke_tcg_status",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Aplicativo para ajudar nas batalhas de Pokémon TCG, permitindo adicionar Pokémons e alterar o seu status.",
-    "main": "main.js",
+    "main": "electron/main.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "electron .",
-        "dist": "electron-builder",
-        "format": "prettier --write .",
-		"check": "prettier --check ."
+        "start": "vite --open",
+        "electron": "electron .",
+        "dev": "concurrently \"npm:start\" \"npm:electron\"",
+        "build":"electron-builder"
     },
     "build": {
         "appId": "com.d4nkali.pokemontcgapp",
         "productName": "Poke TCG App",
-        "copyright": "Copyright © 2024 d4nkali",
+        "copyright": "Copyright © 2025 d4nkali",
         "linux": {
             "target": [
                 "AppImage"
@@ -30,8 +30,8 @@
             ]
         },
         "files": [
-            "src/**/*",
-            "main.js",
+            "frontend/**/*",
+            "electron/**/*",
             "package.json"
         ],
         "directories": {
@@ -42,19 +42,16 @@
         "type": "git",
         "url": "git+https://github.com/d4nkali/Poke_TCG_Status.git"
     },
-    "author": {
-        "name": "d4nkali",
-        "email": "d4n_kali@protonmail.com",
-        "url": "https://github.com/d4nkali"
-    },
+    "author": "d4nkali",
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/d4nkali/Poke_TCG_Status/issues"
     },
     "homepage": "https://github.com/d4nkali/Poke_TCG_Status#readme",
     "devDependencies": {
-        "electron": "^31.2.1",
-        "electron-builder": "^24.13.3",
-        "prettier": "^3.3.3"
+        "concurrently": "^9.1.2",
+        "electron": "^34.0.2",
+        "electron-builder": "^25.1.8",
+        "prettier": "^3.4.2"
     }
 }

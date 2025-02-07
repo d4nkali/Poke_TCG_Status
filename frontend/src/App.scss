@@ -1,10 +1,14 @@
-@import url('https://fonts.cdnfonts.com/css/pokemon-solid');
+@import url('https://fonts.cdnfonts.com/css/pokemon-solid'); /* Fonte do h1 da logo */
 
 body {
     background-color: #2C3E50; 
     color: #ECF0F1; 
     font-family: 'Arial', sans-serif;
     text-align: center;
+}
+
+input[type="text"] {
+    margin-right: 10px;
 }
 
 h1 {
@@ -92,6 +96,8 @@ li {
         display: block;
     }
 }
+
+/* Cor nas opções de status */
 
 option.normal {
     background-color: #49524d;
