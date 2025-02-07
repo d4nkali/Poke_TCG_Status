@@ -1,0 +1,28 @@
+.swal2-actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.botao-confirmar-editar {
+    background-color: #79d622;
+    color: white;
+    cursor: pointer;
+    order: 1;
+}
+
+.botao-confirmar-editar:hover {
+    background-color: #6fb42e;
+}
+
+.botao-cancelar-editar {
+    background-color: #e74c3c;
+    color: white;
+    cursor: pointer;
+    order: -1;
+}
+
+.botao-cancelar-editar:hover {
+    background-color: #C0392B;
+}

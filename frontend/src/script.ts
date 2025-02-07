@@ -1,5 +1,5 @@
 import Swal from 'sweetalert2';
-//import './editarPokemon.scss';
+import './editarPokemon.scss';
 
 function scriptPokemon() {
     const botaoAdicionarPoke = document.getElementById(
@@ -50,6 +50,8 @@ function scriptPokemon() {
                         confirmButton: 'botao-confirmar-editar',
                         cancelButton: 'botao-cancelar-editar',
                     },
+                    background: '#2C3E50',
+                    color:'#ECF0F1'
                 });
 
                 if (novoStatus) {
