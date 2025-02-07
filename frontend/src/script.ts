@@ -1,25 +1,35 @@
+import Swal from 'sweetalert2';
+//import './editarPokemon.scss';
+
 function scriptPokemon() {
+    const botaoAdicionarPoke = document.getElementById(
+        'adicionar_poke',
+    ) as HTMLButtonElement | null;
+    const entradaNomePoke = document.getElementById(
+        'nome_poke',
+    ) as HTMLInputElement | null;
+    const selecaoStatusPoke = document.getElementById(
+        'status_poke',
+    ) as HTMLSelectElement | null;
+    const listaPokemon = document.getElementById(
+        'lista_poke',
+    ) as HTMLUListElement | null;
 
-    const botaoAdicionarPoke = document.getElementById('adicionar_poke') as HTMLButtonElement | null;
-    const entradaNomePoke = document.getElementById('nome_poke') as HTMLInputElement | null;
-    const selecaoStatusPoke = document.getElementById('status_poke') as HTMLSelectElement | null;
-    const listaPokemon = document.getElementById('lista_poke') as HTMLUListElement | null;
-
-    if (!botaoAdicionarPoke || !entradaNomePoke ||
-        !selecaoStatusPoke || !listaPokemon ) {
-
+    if (
+        !botaoAdicionarPoke ||
+        !entradaNomePoke ||
+        !selecaoStatusPoke ||
+        !listaPokemon
+    ) {
         console.warn('Elementos HTML não foram encontrados.');
         return;
-
     }
 
     botaoAdicionarPoke.addEventListener('click', () => {
-
         const nomePokemon = entradaNomePoke.value.trim();
         const pokemonStatus = selecaoStatusPoke.value;
 
         if (nomePokemon && pokemonStatus) {
-
             const listItem = document.createElement('li');
 
             const conteudoPokemon = document.createElement('span');
@@ -27,15 +37,24 @@ function scriptPokemon() {
 
             const botaoEditar = document.createElement('button');
             botaoEditar.textContent = 'Editar';
-            botaoEditar.addEventListener('click', () => {
+            botaoEditar.addEventListener('click', async () => {
+                const { value: novoStatus } = await Swal.fire({
+                    title: `Editar status de ${nomePokemon}`,
+                    input: 'text',
+                    inputPlaceholder: 'Digite o novo status',
+                    showCancelButton: true,
+                    confirmButtonText: 'Salvar',
+                    cancelButtonText: 'Cancelar',
+                    buttonsStyling: false,
+                    customClass: {
+                        confirmButton: 'botao-confirmar-editar',
+                        cancelButton: 'botao-cancelar-editar',
+                    },
+                });
 
-                const novoStatus = prompt(
-                    `Digite o novo status para ${nomePokemon}:`,
-                );
                 if (novoStatus) {
                     conteudoPokemon.textContent = `${nomePokemon} - ${novoStatus}`;
                 }
-
             });
 
             const botaoRemover = document.createElement('button');
@@ -50,10 +69,11 @@ function scriptPokemon() {
             listaPokemon.appendChild(listItem);
 
             entradaNomePoke.value = '';
+
+            botaoEditar.id = 'botao-editar';
+            botaoRemover.id = 'botao-remover';
         }
-
     });
-
 }
 
 export default scriptPokemon;
