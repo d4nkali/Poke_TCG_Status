@@ -6,6 +6,10 @@
 *.js eol=lf
 *.sh eol=lf
 *.sql eol=lf
+*.ts eol=lf
+*.jsx eol=lf
+*.tsx eol=lf
+*.scss eol=lf
 package.json eol=lf
 package-lock.json eol=lf
 
